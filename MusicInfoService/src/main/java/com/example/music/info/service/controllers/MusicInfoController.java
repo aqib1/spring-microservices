@@ -18,7 +18,7 @@ public class MusicInfoController {
 	private MusicInfoBusiness musicInfoBusiness;
 	
 	@RequestMapping(value = URL.MUSIC_INFO_GET_BY_MUSIC_ID, method = RequestMethod.GET)
-	public MusicInfoDto getMusicInfoByMusicId(@PathVariable(name = "musicId") String musicId) {
+	public MusicInfoDto getMusicInfoByMusicId(@PathVariable(name = "musicId") int musicId) {
 		return musicInfoBusiness.getMusicByMusicId(musicId);
 	}
 }

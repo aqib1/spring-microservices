@@ -9,7 +9,7 @@ public class MusicInfoServiceImpl implements MovieInfoService {
 
 	
 	@Override
-	public MusicInfoDto getMusicByMusicId(String movieId) {
+	public MusicInfoDto getMusicByMusicId(int movieId) {
 		return new MusicInfoDto(1, "test", "1kjh2", "C", "2gwiuytw");
 	}
 

@@ -1,0 +1,69 @@
+openapi: "3.0.0"
+info:
+  description: API for music catalog services
+  version: 1.0.0
+  title: Swagger Music catalog
+tags:
+- name: musiccatalogapi
+  description: Music catalog service regarding ratings
+
+paths:
+  /music/catalog/service/{musicId}:
+    get:
+      tags:
+      - Music catalog
+      summary: Check ratings and catalogs of music tracks 
+      operationId: getCatalogByUserById
+      parameters:
+      - in: path
+        name: musicId
+        description: id for music track
+        required: true
+        schema:
+          type : integer
+          format: int32
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#/components/schemas/MusicCatalogResponse' 
+components:
+  schemas:
+      MusicCatalogResponse: 
+       properties:
+        listMusicCatalogDto:
+          type: array
+          items:
+            $ref: '#/components/schemas/MusicCatalogDto'
+        musicDto:
+          type: object
+          $ref: '#/components/schemas/MusicDto' 
+     
+      MusicCatalogDto: 
+       properties: 
+        id:
+          type: integer
+        name:
+          type: string
+        desc:
+          type: string
+        ratingId:
+          type: integer
+        musicId:
+          type : integer
+     
+      MusicDto:
+       properties: 
+        id:
+          type: integer
+        musicName:
+          type: string
+        musicId:
+          type: string
+        musicCatogery:
+          type: int
+        releaseDate:
+          type : int

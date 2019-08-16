@@ -4,7 +4,7 @@ public class MusicInfoDto {
 
 	private int id;
 	private String musicName;
-	private String musicId;
+	private int musicId;
 	private String musicCatogery;
 	private String releaseDate;
 
@@ -12,7 +12,7 @@ public class MusicInfoDto {
 		super();
 	}
 
-	public MusicInfoDto(int id, String musicName, String musicId, String musicCatogery, String releaseDate) {
+	public MusicInfoDto(int id, String musicName, int musicId, String musicCatogery, String releaseDate) {
 		super();
 		this.id = id;
 		this.musicName = musicName;
@@ -37,11 +37,11 @@ public class MusicInfoDto {
 		this.musicName = musicName;
 	}
 
-	public String getMusicId() {
+	public int getMusicId() {
 		return musicId;
 	}
 
-	public void setMusicId(String musicId) {
+	public void setMusicId(int musicId) {
 		this.musicId = musicId;
 	}
 
@@ -66,4 +66,5 @@ public class MusicInfoDto {
 		return "MusicInfoDto [id=" + id + ", musicName=" + musicName + ", musicId=" + musicId + ", musicCatogery="
 				+ musicCatogery + ", releaseDate=" + releaseDate + "]";
 	}
+
 }

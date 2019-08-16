@@ -11,7 +11,7 @@ public class MusicInfoBusiness {
 	@Autowired
 	private MusicInfoServiceImpl musicInfoServiceImpl;
 	
-	public MusicInfoDto getMusicByMusicId(String musicId) {
+	public MusicInfoDto getMusicByMusicId(int musicId) {
 		return musicInfoServiceImpl.getMusicByMusicId(musicId);
 	}
 }
