@@ -4,5 +4,5 @@ import com.example.client.MusicDto;
 
 public interface MusicInfoService {
 	
-	MusicDto getMusicByMusicId (int movieId);
+	MusicDto getMusicByMusicId (int musicId);
 }
