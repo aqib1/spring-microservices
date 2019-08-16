@@ -8,7 +8,7 @@ import com.example.rating.info.service.ratinginfoservice.RatingInfoService;
 public class RatingInfoServiceImpl implements RatingInfoService{
 
 	@Override
-	public RatingInfoDto getRatingsByMusicId(String musicId) {
+	public RatingInfoDto getRatingsByMusicId(int musicId) {
 		return new RatingInfoDto(1, "akj12", 5);
 	}
 	

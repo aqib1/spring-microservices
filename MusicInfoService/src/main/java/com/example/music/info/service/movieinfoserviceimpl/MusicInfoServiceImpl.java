@@ -1,16 +1,17 @@
 package com.example.music.info.service.movieinfoserviceimpl;
 
 import org.springframework.stereotype.Service;
-import com.example.music.info.service.entities.MusicInfoDto;
-import com.example.music.info.service.movieinfoservice.MovieInfoService;
+
+import com.example.client.MusicDto;
+import com.example.music.info.service.movieinfoservice.MusicInfoService;
 
 @Service
-public class MusicInfoServiceImpl implements MovieInfoService {
+public class MusicInfoServiceImpl implements MusicInfoService {
 
 	
 	@Override
-	public MusicInfoDto getMusicByMusicId(int movieId) {
-		return new MusicInfoDto(1, "test", "1kjh2", "C", "2gwiuytw");
+	public MusicDto getMusicByMusicId(int movieId) {
+		return new MusicDto();
 	}
 
 }

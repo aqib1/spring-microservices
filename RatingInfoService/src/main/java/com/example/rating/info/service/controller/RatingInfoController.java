@@ -1,6 +1,7 @@
 package com.example.rating.info.service.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +18,7 @@ public class RatingInfoController {
 	private RatingInfoBusiness ratingInfoBusiness;
 	
 	@RequestMapping(value = URLS.RATING_MOVIE_ID, method = RequestMethod.GET)
-	public RatingInfoDto getRatingByMusicId(String musicId) {
+	public RatingInfoDto getRatingByMusicId(@PathVariable("movieId") int musicId) {
 		return ratingInfoBusiness.getRatingInfoByMusicId(musicId);
 	}
 }

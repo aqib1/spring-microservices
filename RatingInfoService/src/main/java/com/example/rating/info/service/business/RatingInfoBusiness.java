@@ -12,7 +12,7 @@ public class RatingInfoBusiness {
 	@Autowired
 	private RatingInfoServiceImpl ratingInfoServiceImpl;
 	
-	public RatingInfoDto getRatingInfoByMusicId(String musicId) {
+	public RatingInfoDto getRatingInfoByMusicId(int musicId) {
 		return ratingInfoServiceImpl.getRatingsByMusicId(musicId);
 	}
 }

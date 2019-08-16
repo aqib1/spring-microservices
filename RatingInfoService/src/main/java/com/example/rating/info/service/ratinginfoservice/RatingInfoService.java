@@ -4,5 +4,5 @@ import com.example.rating.info.service.entities.RatingInfoDto;
 
 public interface RatingInfoService {
 
-	RatingInfoDto getRatingsByMusicId(String movieId);
+	RatingInfoDto getRatingsByMusicId(int movieId);
 }
