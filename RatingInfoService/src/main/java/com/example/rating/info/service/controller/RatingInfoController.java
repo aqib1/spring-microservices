@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.client.RatingInfoDto;
 import com.example.rating.info.service.business.RatingInfoBusiness;
 import com.example.rating.info.service.consts.URLS;
-import com.example.rating.info.service.entities.RatingInfoDto;
 
 @RestController
 @RequestMapping(value = URLS.RATING_URL)

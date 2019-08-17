@@ -1,6 +1,6 @@
 package com.example.rating.info.service.ratinginfoservice;
 
-import com.example.rating.info.service.entities.RatingInfoDto;
+import com.example.client.RatingInfoDto;
 
 public interface RatingInfoService {
 
