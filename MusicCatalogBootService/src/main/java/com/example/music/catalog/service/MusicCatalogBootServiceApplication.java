@@ -11,11 +11,13 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableFeignClients
 @ComponentScan(basePackages = "com.example.music.catalog.service")
 public class MusicCatalogBootServiceApplication {
-//
+
 //	@Bean
 //	@LoadBalanced
 //	public RestTemplate getRestTemplate() {
-//		return new RestTemplate();
+//		HttpComponentsClientHttpRequestFactory c = new HttpComponentsClientHttpRequestFactory();
+//		c.setConnectTimeout(3000);
+//		return new RestTemplate(c);
 //	}
 
 //	@Bean
