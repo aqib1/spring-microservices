@@ -38,6 +38,12 @@
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
+		
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/com.netflix.feign/feign-core -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

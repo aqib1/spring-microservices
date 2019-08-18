@@ -18,6 +18,7 @@ import com.example.music.catalog.service.business.MusicCatalogBusiness;
 import com.example.music.catalog.service.constants.URLS;
 import com.example.music.catalog.service.restclients.feign.MusicInfoAPI;
 import com.example.music.catalog.service.restclients.feign.RatingInfoAPI;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @RestController
 @RequestMapping(URLS.MUSIC_CAT_URL)
@@ -43,6 +44,7 @@ public class MusicCatalogController {
 	private MusicCatalogBusiness musicCatalogBusiness;
 
 	@RequestMapping(value = URLS.MUSIC_CAT_BY_USER_ID, method = RequestMethod.GET)
+	@HystrixCommand(fallbackMethod = "getFallbackMusicCat")
 	public MusicCatalogResponse getCatalogByUserById(@PathVariable("musicId") int musicId) {
 		// calling a service
 		List<MusicCatalogDto> catalogs = musicCatalogBusiness.getCatalogByUserId(musicId);
@@ -59,6 +61,10 @@ public class MusicCatalogController {
 		catalogs.stream().forEach(x -> ratings.add(ratingInfoAPI.getRatingInfoByMusicId(musicId)));
 		response.setListRatingInfoDto(ratings);
 		return response;
+	}
+
+	public MusicCatalogResponse getFallbackMusicCat(@PathVariable("musicId") int musicId) {
+		return new MusicCatalogResponse();
 	}
 
 //  do not forget to make is asynchronous using mono and flux
